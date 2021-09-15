@@ -1,0 +1,233 @@
+
+.overlay{
+    position: fixed;
+    top: 80px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.1);
+}
+body{
+    margin: 0;
+    height: 100vh;
+    overflow: auto;
+    background-color: #ccc;
+}
+
+.fs-s{
+    font-size: 12px;
+}
+
+#board{
+    background-color: #fff;
+    cursor: crosshair;
+    border: 1px solid #000;
+    margin: 0 2px;
+}
+
+.nav{
+    padding: 8px 12px 0;
+    background-color: rgb(241, 241, 241);
+    height: 80px;
+}
+
+.color-selected{
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    background-color: #000;
+    display: block;
+    cursor: pointer;
+}
+
+.color-list{
+    display: flex;
+}
+
+.color-item{
+    height: 20px;
+    width: 20px;
+    border: 1px solid #000;
+    outline: 1px solid #fff;
+}
+
+.size-container{
+    position: relative;
+    text-align: center;
+}
+
+.size-container:hover .size-select{
+    display: block;
+}
+
+.size-list{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+.size-1{
+    height: 1px;
+    background-color: #000;
+}
+
+.size-2{
+    height: 2px;
+    background-color: #000;
+}
+
+.size-3{
+    height: 3px;
+    background-color: #000;
+}
+
+.size-4{
+    height: 4px;
+    background-color: #000;
+}
+
+.size-5{
+    height: 5px;
+    background-color: #000;
+}
+
+.size-select{
+    position: absolute;
+    width: 100px;
+    top: 100%;
+    list-style: none;
+    padding-left: 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    display: none;
+}
+
+.size-select li{
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 12px 8px;
+}
+
+.size-select li.selected div{
+    border: 1px solid #fff;
+    outline: 1px solid rgb(255, 110, 110);
+}
+
+.size-select li:hover{
+    cursor: pointer;
+    background-color: #ebebeb;
+}
+
+.tool-container{
+    text-align: center;
+}
+
+.tool-list{
+    height: 40px;
+    padding: 0 12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tool-item{
+    cursor: pointer;
+    width: 33.333%;
+    height: 20px;
+    display: flex;
+}
+[data-tool].selected{
+    background-color: rgba(13, 110, 253, 0.2);
+    border: 1px solid var(--bs-primary);
+}
+
+.tool-item i{
+    font-size: 14px;
+    margin: auto;
+}
+
+.text-tool{
+    height: 40px;
+    padding: 0 12px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 160px;
+}
+
+.text-style{
+    cursor: pointer;
+    height: 20px;
+    display: flex;
+    flex: 2;
+}
+
+.text-style i{
+    font-size: 14px;
+    margin: auto;
+}
+
+.text-style.selected{
+    background-color: rgba(13, 110, 253, 0.2);
+    border: 1px solid var(--bs-primary);
+}
+
+.sharps-container{
+    text-align: center;
+
+}
+
+.sharps{
+    display: flex;
+    height:40px;
+}
+
+.sharps-item{
+    margin: 0 2px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.sharps-item .line{
+    height: 1px;
+    width: 20px;
+    background-color: var(--bs-primary);
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.sharps-item .rect{
+    border: 1px solid var(--bs-primary);
+    margin: 2px;
+    height: 14px;
+    width: 20px;
+}
+
+.sharps-item .circle{
+    border-radius: 50%;
+    border: 1px solid var(--bs-primary);
+    margin: 2px;
+    height: 14px;
+    width: 14px;
+}
+
+.do-container{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0 12px;
+}
+
+.do-button{
+    color: var(--bs-primary);
+    border: 1px solid var(--bs-primary);
+    background-color: transparent;
+    margin-right: 4px;
+}
+
+.do-button.disabled {
+    color: var(--bs-gray);
+    border: 1px solid var(--bs-gray);
+}

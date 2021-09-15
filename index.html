@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3_min/css/all.min.css">
+    <link rel="stylesheet" href="./bootstrap-5.1.0-dist//css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div id="main container-fluid">
+        <div class="nav">
+            <div class="sharps-container">
+                <div class="sharps">
+                    <div class="sharps-item" data-tool="line">
+                        <div class="line"></div>
+                    </div>
+                    <div class="sharps-item" data-tool="rect">
+                        <div class="rect"></div>
+                    </div>
+                    <div class="sharps-item" data-tool="circle">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <span class="fs-s">Sharps</span>
+            </div>
+            <div class="tool-container">
+                <div class="text-tool d-none">
+                    <select id="font-select" class="w-100 fs-s mb-0">
+                        <option style="font-family: arial;" value="arial">Arial</option>
+                        <option style="font-family: cursive;" value="cursive">Cursive</option>
+                        <option style="font-family: fantasy;" value="fantasy">Fantas</option>
+                        <option style="font-family: monospace;" value="monospace">Monospace</option>
+                    </select>
+                    <div class="text-style-list d-flex">
+                        <div class="d-flex" style="flex: 3; height: 20px;">
+                            <input class="w-100 text-fs" type="number" value="16">
+                        </div>
+                        <div class="text-style" data-style="weight" title="Bold">
+                            <i class="fas fa-bold"></i>
+                        </div>
+                        <div class="text-style" data-style="italic" title="Italic">
+                            <i class="fas fa-italic"></i>
+                        </div>
+                        <div class="text-style" data-style="underline" title="Decoration">
+                            <i class="fas fa-underline"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="tool-list">
+                    <div class="tool-item pen selected" data-tool="pen" title="Pen">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <div class="tool-item" data-tool="eraser" title="Eraser">
+                        <i class="fas fa-eraser"></i>
+                    </div>
+                    <div class="tool-item" data-tool="zoom-in" title="Zoom in">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="tool-item" data-tool="color-picker" title="Color picker">
+                        <i class="fas fa-eye-dropper"></i>
+                    </div>
+                    <div class="tool-item" data-tool="text" title="Text">
+                        <i class="fas fa-font"></i>
+                    </div>
+                    <div class="tool-item" data-tool="zoom-out" title="Zoom out">
+                        <i class="fas fa-search-minus"></i>
+                    </div>
+                </div>
+                <span class="fs-s">Tool</span>
+            </div>
+
+            <div class="size-container">
+                <div class="size-list">
+                    <div class="size-1"></div>
+                    <div class="size-2"></div>
+                    <div class="size-3"></div>
+                    <div class="size-4"></div>
+                    <div class="size-5"></div>
+                </div>
+                <span class="fs-s">Size</span>
+                <ul class="size-select">
+                    <li data-size="1" class="selected">
+                        <div class="size-1"></div>
+                    </li>
+                    <li data-size="2">
+                        <div class="size-2"></div>
+                    </li>
+                    <li data-size="3">
+                        <div class="size-3"></div>
+                    </li>
+                    <li data-size="4">
+                        <div class="size-4"></div>
+                    </li>
+                    <li data-size="5">
+                        <div class="size-5"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="color-container d-flex">
+                <div class="text-center">
+                    <label for="color-select" class="color-selected"></label>
+                    <span class="fs-s">Color</span>
+                    <input type="color" hidden id="color-select">
+                </div>
+                <div>
+                    <div class="color-list">
+                        <button data-color="#0d6efd" class="color-item"></button>
+                        <button data-color="#6610f2" class="color-item"></button>
+                        <button data-color="#6f42c1" class="color-item"></button>
+                        <button data-color="#d63384" class="color-item"></button>
+                        <button data-color="#dc3545" class="color-item"></button>
+                        <button data-color="brown" class="color-item"></button>
+                        <button data-color="#fd7e14" class="color-item"></button>
+                        <button data-color="#ffc107" class="color-item"></button>
+                        <button data-color="#198754" class="color-item"></button>
+                        <button data-color="#20c997" class="color-item"></button>
+                        <button data-color="#0dcaf0" class="color-item"></button>
+                    </div>
+                    <div class="color-list">
+                        <button data-color="#fff" class="color-item"></button>
+                        <button data-color="#f8f9fa" class="color-item"></button>
+                        <button data-color="#e9ecef" class="color-item"></button>
+                        <button data-color="#dee2e6" class="color-item"></button>
+                        <button data-color="#ced4da" class="color-item"></button>
+                        <button data-color="#adb5bd" class="color-item"></button>
+                        <button data-color="#6c757d" class="color-item"></button>
+                        <button data-color="#495057" class="color-item"></button>
+                        <button data-color="#343a40" class="color-item"></button>
+                        <button data-color="#212529" class="color-item"></button>
+                        <button data-color="#000" class="color-item"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="do-container">
+                <button class="do-button undo disabled" >
+                    <i class="fas fa-undo-alt"></i>
+                </button>
+                <button class="do-button redo disabled" >
+                    <i class="fas fa-redo-alt"></i>
+                </button>
+            </div>
+            
+        </div>
+        <div class="overflow-auto">
+            <div class="overlay d-none"></div>
+            <canvas id="board"></canvas>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="./bootstrap-5.1.0-dist/js/bootstrap.min.js">
+    <script src="./script.js"></script>
+</body>
+</html>
